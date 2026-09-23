@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potiguar Auto Center | Pneus, Baterias e Oficina em Macaíba e Parnamirim - RN</title>
+  <meta name="description" content="Pneus Aro 13, 14 e 15 a partir de R$ 259,99 e Bateria 60A por R$ 259,99 na Potiguar Auto Center em Macaíba e Parnamirim - RN. Alinhamento, balanceamento e serviços mecânicos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+  <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- TOPBAR COM LETREIRO HORIZONTAL (MARQUEE) -->
+  <div class="topbar" id="topbar-marquee">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span class="marquee-item"><img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji"> AUTO CENTER EM MACAÍBA E PARNAMIRIM – FAÇA O SEU ORÇAMENTO GRÁTIS!</span>
+        <span class="marquee-separator">•</span>
+        <span class="marquee-item"><img src="public/emojis/apple/1f697.png" alt="🚗" class="apple-emoji"> QUALIDADE, SEGURANÇA E O MELHOR ATENDIMENTO PARA O SEU VEÍCULO!</span>
+        <span class="marquee-separator">•</span>
+        <span class="marquee-item"><img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji"> A SUA OFICINA DE CONFIANÇA – AVALIAÇÃO 5.0 NO GOOGLE!</span>
+        <span class="marquee-separator">•</span>
+      </div>
+      <div class="marquee-group" aria-hidden="true">
+        <span class="marquee-item"><img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji"> AUTO CENTER EM MACAÍBA E PARNAMIRIM – FAÇA O SEU ORÇAMENTO GRÁTIS!</span>
+        <span class="marquee-separator">•</span>
+        <span class="marquee-item"><img src="public/emojis/apple/1f697.png" alt="🚗" class="apple-emoji"> QUALIDADE, SEGURANÇA E O MELHOR ATENDIMENTO PARA O SEU VEÍCULO!</span>
+        <span class="marquee-separator">•</span>
+        <span class="marquee-item"><img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji"> A SUA OFICINA DE CONFIANÇA – AVALIAÇÃO 5.0 NO GOOGLE!</span>
+        <span class="marquee-separator">•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER COM LOGO, HORÁRIO E AVALIAÇÃO + WHATSAPP -->
+  <header>
+    <div class="container header-flex">
+      <!-- LADO ESQUERDO: LOGO -->
+      <div class="header-left">
+        <a href="#" class="logo-oval">
+          POTIGUAR
+          <span>AUTO CENTER</span>
+        </a>
+      </div>
+
+      <!-- CENTRO: HORÁRIO DE ATENDIMENTO -->
+      <div class="header-center">
+        <div class="header-hours">
+          <img src="public/emojis/apple/1f552.png" alt="🕒" class="apple-emoji">
+          <span><strong>Seg a Sex:</strong> 08h às 17h | <strong>Sáb:</strong> 08h às 12h</span>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO: AVALIAÇÃO GOOGLE + BOTÃO WHATSAPP -->
+      <div class="header-right">
+        <div class="header-rating-box">
+          <span class="header-rating-stars">★★★★★</span>
+          <span class="header-rating-val">5.0 no Google</span>
+        </div>
+        <button type="button" class="btn-header-whatsapp" onclick="abrirModalCidade('Atendimento Geral', 'Orçamento')" title="Falar no WhatsApp">
+          <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji">
+          <span>Falar no WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge-garantia"><img src="public/emojis/apple/1f6e1-fe0f.png" alt="🛡️" class="apple-emoji"> PNEUS NOVOS COM 5 ANOS DE GARANTIA</span>
+      <h1>Sua Troca de <span>Pneu & Bateria</span> com o Melhor Preço!</h1>
+      <p>Cobrimos orçamentos na região de Macaíba e Parnamirim. Pneus aro 13, 14 e 15 a pronta entrega e baterias com instalação no local.</p>
+      
+      <div style="max-width: 400px; margin: 0 auto;">
+        <button type="button" onclick="abrirModalCidade('Pneus e Baterias', 'Consultar Ofertas')" class="btn btn-whatsapp">
+          <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji"> Falar no WhatsApp Agora
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS DE OFERTAS (PREÇOS DO INSTAGRAM) -->
+  <section class="offers-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">OFERTAS EXCLUSIVAS DO INSTAGRAM</h2>
+        <p class="section-subtitle">Valores promocionais para pagamento à vista ou parcelado</p>
+      </div>
+
+      <div class="grid-offers">
+        <!-- ARO 13 -->
+        <div class="card-offer">
+          <div class="card-tag">Super Promo</div>
+          <h3>Pneu Aro 13</h3>
+          <div class="card-price">
+            <span class="label">A partir de</span>
+            <span class="value">R$ 259<span class="cents">,99</span></span>
+          </div>
+          <ul class="card-features">
+            <li>Pneu Novo com 5 Anos de Garantia</li>
+            <li>Montagem Grátis na Loja</li>
+            <li>Pronta Entrega</li>
+          </ul>
+          <button type="button" onclick="abrirModalCidade('Pneu Aro 13', 'A partir de R$ 259,99')" class="btn btn-yellow" style="font-size: 13px; padding: 12px;">
+            Garantir Promoção
+          </button>
+        </div>
+
+        <!-- ARO 14 -->
+        <div class="card-offer">
+          <div class="card-tag">Mais Vendido</div>
+          <h3>Pneu Aro 14</h3>
+          <div class="card-price">
+            <span class="label">A partir de</span>
+            <span class="value">R$ 279<span class="cents">,99</span></span>
+          </div>
+          <ul class="card-features">
+            <li>Pneu Novo com 5 Anos de Garantia</li>
+            <li>Alinhamento e Balanceamento no local</li>
+            <li>Pronta Entrega</li>
+          </ul>
+          <button type="button" onclick="abrirModalCidade('Pneu Aro 14', 'A partir de R$ 279,99')" class="btn btn-yellow" style="font-size: 13px; padding: 12px;">
+            Garantir Promoção
+          </button>
+        </div>
+
+        <!-- ARO 15 -->
+        <div class="card-offer">
+          <div class="card-tag">Oferta Especial</div>
+          <h3>Pneu Aro 15</h3>
+          <div class="card-price">
+            <span class="label">A partir de</span>
+            <span class="value">R$ 329<span class="cents">,99</span></span>
+          </div>
+          <ul class="card-features">
+            <li>Pneu Novo com 5 Anos de Garantia</li>
+            <li>Ideal para Sedans e SUVs compactos</li>
+            <li>Pronta Entrega</li>
+          </ul>
+          <button type="button" onclick="abrirModalCidade('Pneu Aro 15', 'A partir de R$ 329,99')" class="btn btn-yellow" style="font-size: 13px; padding: 12px;">
+            Garantir Promoção
+          </button>
+        </div>
+
+        <!-- BATERIA 60A -->
+        <div class="card-offer card-offer-blue" style="border-color: var(--blue);">
+          <div class="card-tag" style="background: var(--yellow); color: var(--dark);">Líder de Vendas</div>
+          <h3>Bateria 60A</h3>
+          <div class="card-price">
+            <span class="label">Apenas</span>
+            <span class="value">R$ 259<span class="cents">,99</span></span>
+          </div>
+          <ul class="card-features">
+            <li>Com a devolução da sucata usada</li>
+            <li>Teste de alternador grátis</li>
+            <li>Entrega e instalação rápida</li>
+          </ul>
+          <button type="button" onclick="abrirModalCidade('Bateria 60A', 'R$ 259,99')" class="btn btn-whatsapp" style="font-size: 13px; padding: 12px;">
+            Pedir Bateria
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS DA OFICINA -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">SERVIÇOS DE MANUTENÇÃO AUTOMOTIVA</h2>
+        <p class="section-subtitle">Estrutura completa com profissionais qualificados em Macaíba</p>
+      </div>
+
+      <div class="grid-services">
+        <div class="service-box">
+          <h4><img src="public/emojis/apple/1f527.png" alt="🔧" class="apple-emoji"> Alinhamento 3D & Balanceamento</h4>
+          <p>Evite o desgaste irregular dos seus pneus e garanta a estabilidade do seu carro na estrada.</p>
+        </div>
+        <div class="service-box">
+          <h4><img src="public/emojis/apple/1f6e2-fe0f.png" alt="🛢️" class="apple-emoji"> Troca de Óleo e Filtros</h4>
+          <p>Lubrificantes de alta qualidade com checagem gratuita dos níveis de fluidos.</p>
+        </div>
+        <div class="service-box">
+          <h4><img src="public/emojis/apple/1f6d1.png" alt="🛑" class="apple-emoji"> Freios e Suspensão</h4>
+          <p>Revisão completa em pastilhas, discos, amortecedores e buchas com diagnóstico rápido.</p>
+        </div>
+        <div class="service-box">
+          <h4><img src="public/emojis/apple/26a1.png" alt="⚡" class="apple-emoji"> Socorro Elétrico & Baterias</h4>
+          <p>Diagnóstico de bateria, alternador e motor de partida para você não ficar na mão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE DEPOIMENTOS DO GOOGLE -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="google-badge-pill">
+          <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Avaliações Verificadas no Google • Nota 5.0</span>
+        </div>
+        <h2 class="section-title">O QUE NOSSOS CLIENTES DIZEM</h2>
+        <p class="section-subtitle">Mais de 1.200 clientes atendidos com nota máxima em Macaíba e Parnamirim</p>
+      </div>
+
+      <div class="grid-reviews">
+        <!-- CARD 1: LUIGGI -->
+        <div class="card-review">
+          <div class="review-header">
+            <div class="review-avatar avatar-blue">L</div>
+            <div class="review-user-info">
+              <h4>Luiggi</h4>
+              <span class="review-unit">9 avaliações • há 1 ano</span>
+            </div>
+            <div class="google-logo-mini" title="Avaliação Verificada no Google">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="review-stars">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+          </div>
+          <p class="review-text">"Atendimento profissional, tanto pelo proprietário como dos funcionários que fizeram o serviço. Troquei dois pneus dianteiros. Ótimo custo benefício."</p>
+        </div>
+
+        <!-- CARD 2: DENIO REBOUÇAS -->
+        <div class="card-review">
+          <div class="review-header">
+            <div class="review-avatar avatar-orange">D</div>
+            <div class="review-user-info">
+              <h4>Denio REBOUÇAS</h4>
+              <span class="review-unit">Local Guide • 34 avaliações • há 3 anos</span>
+            </div>
+            <div class="google-logo-mini" title="Avaliação Verificada no Google">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="review-stars">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+          </div>
+          <p class="review-text">"Bons preços e ótimo atendimento. Variedade de linhas de pneus e excelentes prestação de serviço. Recomendo o serviço de alinhamento e balanceamento."</p>
+        </div>
+
+        <!-- CARD 3: CARLOS EDUARDO SILVA -->
+        <div class="card-review">
+          <div class="review-header">
+            <div class="review-avatar avatar-purple">C</div>
+            <div class="review-user-info">
+              <h4>Carlos Eduardo Silva</h4>
+              <span class="review-unit">2 avaliações • há 1 ano</span>
+            </div>
+            <div class="google-logo-mini" title="Avaliação Verificada no Google">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="review-stars">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+            <img src="public/emojis/apple/2b50.png" alt="⭐" class="apple-emoji">
+          </div>
+          <p class="review-text">"Super recomendo ! Excelente atendimento, orçamento com preço justo. Servido rápido e de qualidade e confiança."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR DE ORÇAMENTO -->
+  <section class="simulator-section">
+    <div class="container">
+      <div class="sim-card">
+        <h3>SIMULADOR DE ORÇAMENTO RÁPIDO</h3>
+        <p>Preencha os dados abaixo e receba a cotação no seu WhatsApp em menos de 3 minutos:</p>
+
+        <form id="simForm" onsubmit="enviaWhatsApp(event)">
+          <div class="form-group">
+            <label for="unidade">Selecione a Unidade:</label>
+            <select id="unidade" class="form-control" required>
+              <option value="5584999530109|Macaíba">Macaíba - (84) 99953-0109</option>
+              <option value="5584999822491|Parnamirim">Parnamirim - (84) 99982-2491</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="servico">Do que seu carro precisa?</label>
+            <select id="servico" class="form-control" required>
+              <option value="Pneu Aro 13">Pneu Aro 13</option>
+              <option value="Pneu Aro 14">Pneu Aro 14</option>
+              <option value="Pneu Aro 15">Pneu Aro 15</option>
+              <option value="Bateria 60A">Bateria 60A</option>
+              <option value="Alinhamento e Balanceamento">Alinhamento e Balanceamento</option>
+              <option value="Troca de Óleo">Troca de Óleo</option>
+              <option value="Revisão Geral de Mecânica">Revisão Geral de Mecânica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="carro">Modelo e Ano do Veículo:</label>
+            <input type="text" id="carro" class="form-control" placeholder="Ex: Gol 1.0 2018 / Palio / Uno" required>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp">
+            <img src="public/emojis/apple/1f4f2.png" alt="📲" class="apple-emoji"> Enviar Solicitação no WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENDEREÇO E LOCALIZAÇÃO - DUAS UNIDADES -->
+  <section class="info-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 28px;">
+        <h2 class="section-title">NOSSAS UNIDADES</h2>
+        <p class="section-subtitle">Visite a loja da Potiguar Auto Center mais próxima de você</p>
+      </div>
+
+      <div class="grid-unidades">
+        <!-- UNIDADE MACAÍBA -->
+        <div class="info-card">
+          <div>
+            <div class="unidade-badge">Unidade 1</div>
+            <h3 class="unidade-title">Macaíba - RN</h3>
+
+            <div class="info-row">
+              <div class="info-icon"><img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji"></div>
+              <div class="info-text">
+                <h5>Endereço</h5>
+                <p>Av. Jundiaí, nº 117 - Cj Monte Líbano, Macaíba - RN, 59280-000</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon"><img src="public/emojis/apple/1f552.png" alt="🕒" class="apple-emoji"></div>
+              <div class="info-text">
+                <h5>Horário de Atendimento</h5>
+                <p>Segunda a Sexta: 08h às 17h | Sábado: 08h às 12h</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon"><img src="public/emojis/apple/1f4de.png" alt="📞" class="apple-emoji"></div>
+              <div class="info-text">
+                <h5>Telefone / WhatsApp</h5>
+                <p class="phone-highlight">(84) 99953-0109</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="unidade-actions">
+            <a href="https://wa.me/5584999530109?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Potiguar%20Auto%20Center%20e%20gostaria%20de%20atendimento%20na%20unidade%20de%20Maca%C3%ADba." target="_blank" class="btn btn-whatsapp">
+              <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji"> Falar no WhatsApp Macaíba
+            </a>
+            <a href="https://maps.google.com/?q=Av.+Jundia%C3%AD,+117+-+Cj+Monte+Libano,+Maca%C3%ADba+-+RN" target="_blank" class="btn-outline-map">
+              <img src="public/emojis/apple/1f5fa-fe0f.png" alt="🗺️" class="apple-emoji"> Traçar Rota Macaíba
+            </a>
+          </div>
+        </div>
+
+        <!-- UNIDADE PARNAMIRIM -->
+        <div class="info-card">
+          <div>
+            <div class="unidade-badge">Unidade 2</div>
+            <h3 class="unidade-title">Parnamirim - RN</h3>
+
+            <div class="info-row">
+              <div class="info-icon"><img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji"></div>
+              <div class="info-text">
+                <h5>Endereço</h5>
+                <p>Av. Piloto Pereira Tim, 69 - Centro, Parnamirim - RN, 59140-000</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon"><img src="public/emojis/apple/1f552.png" alt="🕒" class="apple-emoji"></div>
+              <div class="info-text">
+                <h5>Horário de Atendimento</h5>
+                <p>Segunda a Sexta: 08h às 17h | Sábado: 08h às 12h</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon"><img src="public/emojis/apple/1f4de.png" alt="📞" class="apple-emoji"></div>
+              <div class="info-text">
+                <h5>Telefone / WhatsApp</h5>
+                <p class="phone-highlight">(84) 99982-2491</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="unidade-actions">
+            <a href="https://wa.me/5584999822491?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Potiguar%20Auto%20Center%20e%20gostaria%20de%20atendimento%20na%20unidade%20de%20Parnamirim." target="_blank" class="btn btn-whatsapp">
+              <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji"> Falar no WhatsApp Parnamirim
+            </a>
+            <a href="https://maps.google.com/?q=Av.+Piloto+Pereira+Tim,+69+-+Centro,+Parnamirim+-+RN" target="_blank" class="btn-outline-map">
+              <img src="public/emojis/apple/1f5fa-fe0f.png" alt="🗺️" class="apple-emoji"> Traçar Rota Parnamirim
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA FIXA MOBILE -->
+  <div class="mobile-bar">
+    <a href="https://wa.me/5584999530109?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Potiguar%20Auto%20Center%20e%20gostaria%20de%20atendimento%20em%20Maca%C3%ADba." class="btn btn-whatsapp" style="flex: 1; padding: 10px 4px; font-size: 12px; text-align: center;">
+      <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji"> Macaíba
+    </a>
+    <a href="https://wa.me/5584999822491?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Potiguar%20Auto%20Center%20e%20gostaria%20de%20atendimento%20em%20Parnamirim." class="btn btn-whatsapp" style="flex: 1; padding: 10px 4px; font-size: 12px; text-align: center; background: #003399;">
+      <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji"> Parnamirim
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p><strong>POTIGUAR AUTO CENTER</strong></p>
+      <p style="margin: 6px 0; color: #ddd;">
+        <img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji"> <strong>Macaíba:</strong> (84) 99953-0109 &bull; <img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji"> <strong>Parnamirim:</strong> (84) 99982-2491
+      </p>
+      <p>Pneus, Baterias e Manutenção Automotiva de Confiança</p>
+    </div>
+  </footer>
+
+  
+  <!-- MODAL DE SELEÇÃO DE CIDADE / UNIDADE -->
+  <div class="modal-overlay" id="modal-cidade" onclick="fecharModalFora(event)">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <button type="button" class="modal-close-btn" onclick="fecharModalCidade()" aria-label="Fechar">&times;</button>
+        <h3 class="modal-title" id="modal-title">Escolha a Unidade</h3>
+        <div class="modal-product-badge" id="modal-produto-badge">Produto Selecionado</div>
+      </div>
+      <div class="modal-body">
+        <p class="modal-instructions">Em qual de nossas lojas você gostaria de fazer o seu pedido?</p>
+        
+        <div class="modal-cities-grid">
+          <!-- MACAÍBA -->
+          <button type="button" class="city-card-btn" onclick="selecionarCidade('Macaíba')">
+            <div class="city-card-info">
+              <div class="city-card-icon">
+                <img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji">
+              </div>
+              <div>
+                <div class="city-card-name">Macaíba - RN</div>
+                <div class="city-card-desc">Av. Jundiaí, nº 117 &bull; (84) 99953-0109</div>
+              </div>
+            </div>
+            <div class="city-card-action">
+              <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji">
+              <span>Pedir</span>
+            </div>
+          </button>
+
+          <!-- PARNAMIRIM -->
+          <button type="button" class="city-card-btn" onclick="selecionarCidade('Parnamirim')">
+            <div class="city-card-info">
+              <div class="city-card-icon" style="background: var(--blue);">
+                <img src="public/emojis/apple/1f4cd.png" alt="📍" class="apple-emoji">
+              </div>
+              <div>
+                <div class="city-card-name">Parnamirim - RN</div>
+                <div class="city-card-desc">Av. Piloto Pereira Tim, 69 &bull; (84) 99982-2491</div>
+              </div>
+            </div>
+            <div class="city-card-action">
+              <img src="public/emojis/apple/1f4ac.png" alt="💬" class="apple-emoji">
+              <span>Pedir</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
