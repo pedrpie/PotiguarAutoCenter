@@ -1,0 +1,54 @@
+/* BOTÕES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  font-family: inherit;
+}
+
+.btn-whatsapp {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  background: var(--green-hover);
+  transform: translateY(-2px);
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: var(--dark);
+  box-shadow: 0 6px 20px rgba(255, 204, 0, 0.3);
+}
+
+.btn-yellow:hover {
+  background: var(--yellow-hover);
+}
+
+.btn-blue {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 6px 20px rgba(0, 51, 153, 0.4);
+}
+
+.btn-blue:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  font-size: 13px;
+  padding: 12px;
+}

@@ -1,0 +1,31 @@
+/* BARRA FIXA MOBILE */
+.mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark);
+  padding: 10px 16px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  border-top: 2px solid var(--yellow);
+}
+
+.mobile-bar .btn {
+  flex: 1;
+  padding: 10px 4px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.mobile-bar .emoji {
+  font-size: 1.2em;
+}
+
+@media (min-width: 640px) {
+  .mobile-bar {
+    display: none;
+  }
+}

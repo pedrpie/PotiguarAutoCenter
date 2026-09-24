@@ -1,0 +1,103 @@
+/* HERO SECTION */
+.hero {
+  background:
+    radial-gradient(
+      ellipse 90% 60% at 50% -10%,
+      rgba(0, 51, 153, 0.5) 0%,
+      transparent 75%
+    ),
+    radial-gradient(
+      circle at 88% 25%,
+      rgba(255, 204, 0, 0.09) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(0, 34, 102, 0.35) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #090c13 0%, #121722 55%, #0a0d14 100%);
+  color: var(--white);
+  padding: 44px 0 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 204, 0, 0.15);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 204, 0, 0.35),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.badge-garantia {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--dark);
+  font-weight: 900;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.4);
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero h1 span {
+  color: var(--yellow);
+}
+
+.hero p {
+  font-size: 15px;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.badge-garantia .emoji {
+  font-size: 1.25em;
+  margin-right: 4px;
+}
+
+.hero-cta {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+}

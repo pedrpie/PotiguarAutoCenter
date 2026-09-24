@@ -1,0 +1,222 @@
+/* HEADER */
+.site-header {
+  background: var(--dark);
+  padding: 12px 0;
+  border-bottom: 3px solid var(--yellow);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.site-header .container {
+  max-width: 1100px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 1. LADO ESQUERDO: LOGO */
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-oval {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--dark);
+  border: 3px solid var(--blue);
+  border-radius: 50% / 50%;
+  padding: 6px 16px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.logo-oval:hover {
+  transform: scale(1.03);
+}
+
+.logo-oval span {
+  display: block;
+  font-size: 10px;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+/* 2. CENTRO: HORÁRIO DE ATENDIMENTO */
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.header-hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.header-hours strong {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.header-hours .emoji {
+  font-size: 15px;
+}
+
+/* 3. LADO DIREITO: GOOGLE + BOTÃO WHATSAPP */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-rating-box {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-rating-stars {
+  color: var(--yellow);
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.header-rating-val {
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn-header-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-header-whatsapp:hover {
+  background: var(--green-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+}
+
+.btn-header-whatsapp .emoji {
+  font-size: 15px;
+}
+
+/* RESPONSIVIDADE NO MOBILE PARA O HEADER */
+@media (max-width: 860px) {
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .header-left {
+    flex-shrink: 0;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0;
+  }
+
+  /* No celular: oculta horários e avaliação do Google, mantendo apenas logo e WhatsApp */
+  .header-center,
+  .header-rating-box {
+    display: none;
+  }
+
+  .btn-header-whatsapp {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 8px 0;
+  }
+
+  .logo-oval {
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+
+  .logo-oval span {
+    font-size: 8.5px;
+  }
+
+  .btn-header-whatsapp {
+    padding: 6px 10px;
+    font-size: 11.5px;
+    gap: 5px;
+  }
+
+  .btn-header-whatsapp .emoji {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-oval {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .logo-oval span {
+    font-size: 8px;
+  }
+
+  .btn-header-whatsapp {
+    padding: 5px 8px;
+    font-size: 10.5px;
+    gap: 4px;
+  }
+}

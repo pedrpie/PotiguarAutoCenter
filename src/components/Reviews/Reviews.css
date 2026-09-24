@@ -1,0 +1,137 @@
+/* SEÇÃO DE DEPOIMENTOS GOOGLE */
+.reviews-section {
+  padding: 40px 0 46px;
+  background: #eef2f6;
+}
+
+.google-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3c4043;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.google-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.grid-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid-reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-review {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition:
+    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.card-review:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.avatar-blue {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+}
+
+.avatar-orange {
+  background: linear-gradient(135deg, #e65100, #ff6d00);
+}
+
+.avatar-purple {
+  background: linear-gradient(135deg, #6200ea, #7c4dff);
+}
+
+.review-user-info {
+  flex: 1;
+}
+
+.review-user-info h3 {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.review-unit {
+  font-size: 11px;
+  color: #64748b;
+  display: block;
+  margin-top: 2px;
+}
+
+.google-logo-mini {
+  flex-shrink: 0;
+  background: #f8fafc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.review-stars .emoji {
+  font-size: 16px;
+}
+
+.review-text {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #475569;
+  font-style: italic;
+}

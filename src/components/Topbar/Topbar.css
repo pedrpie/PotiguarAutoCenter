@@ -1,0 +1,68 @@
+/* TOPBAR COM LETREIRO HORIZONTAL (MARQUEE) */
+.topbar {
+  background: var(--yellow);
+  color: var(--dark);
+  font-weight: 800;
+  font-size: 13px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  cursor: default;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 36s linear infinite;
+  will-change: transform;
+}
+
+.topbar:hover .marquee-track,
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 24px;
+  white-space: nowrap;
+}
+
+.marquee-separator {
+  color: rgba(17, 17, 17, 0.4);
+  font-size: 14px;
+  padding: 0 4px;
+  user-select: none;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.topbar .emoji {
+  font-size: 1.2em;
+  margin-right: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

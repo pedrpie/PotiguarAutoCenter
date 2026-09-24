@@ -1,0 +1,212 @@
+/* MODAL DE SELEÇÃO DE CIDADE */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: #161616;
+  border: 2px solid var(--yellow);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.65),
+    0 0 30px rgba(255, 204, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.94) translateY(12px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-header {
+  padding: 22px 24px 16px;
+  border-bottom: 1px solid #282828;
+  position: relative;
+  text-align: center;
+  background: #1c1c1c;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #282828;
+  border: 1px solid #3a3a3a;
+  color: #bbb;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #333;
+  color: var(--yellow);
+  transform: rotate(90deg);
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modal-product-badge {
+  display: inline-block;
+  background: rgba(255, 204, 0, 0.12);
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.modal-body {
+  padding: 22px 20px 24px;
+}
+
+.modal-instructions {
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.modal-cities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.city-card-btn {
+  background: #202020;
+  border: 2px solid #2e2e2e;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+  color: var(--white);
+  font-family: inherit;
+}
+
+.city-card-btn:hover {
+  border-color: var(--yellow);
+  background: #262626;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.city-card-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.city-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.city-card-icon .emoji {
+  font-size: 24px;
+}
+
+.city-card-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.city-card-desc {
+  font-size: 12px;
+  color: #999;
+  margin-top: 3px;
+}
+
+.city-card-action {
+  background: var(--green);
+  color: var(--white);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.city-card-action .emoji {
+  font-size: 16px;
+}
+
+.city-card-btn:hover .city-card-action {
+  background: var(--green-hover);
+  transform: scale(1.04);
+}
+
+.city-card-icon--blue {
+  background: var(--blue);
+}
+
+.city-card-name,
+.city-card-desc {
+  display: block;
+}

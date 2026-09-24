@@ -1,0 +1,117 @@
+/* SEÇÃO DE OFERTAS / CARDS DO INSTAGRAM */
+.offers-section {
+  padding: 32px 0;
+}
+
+.grid-offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card-offer {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 2px solid var(--yellow);
+  padding: 22px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.card-offer:hover {
+  transform: translateY(-8px);
+  border-color: #ffd633;
+  box-shadow:
+    0 18px 36px -8px rgba(255, 204, 0, 0.4),
+    0 0 24px rgba(255, 204, 0, 0.25);
+  z-index: 2;
+}
+
+.card-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.card-offer h3 {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--dark);
+  margin-top: 8px;
+}
+
+.card-price {
+  margin: 14px 0;
+}
+
+.card-price .label {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  text-transform: uppercase;
+}
+
+.card-price .value {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.card-price .cents {
+  font-size: 18px;
+}
+
+.card-features {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.card-features li {
+  list-style: none;
+  padding: 4px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.card-features li::before {
+  content: "✓ ";
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* Variante azul (Bateria) */
+.card-offer-blue {
+  border-color: var(--blue);
+}
+
+.card-offer.card-offer-blue:hover {
+  border-color: #0044cc;
+  box-shadow:
+    0 18px 36px -8px rgba(0, 51, 153, 0.48),
+    0 0 24px rgba(0, 51, 153, 0.3);
+}
+
+.card-tag-yellow {
+  background: var(--yellow);
+  color: var(--dark);
+}

@@ -1,0 +1,75 @@
+:root {
+  --yellow: #ffcc00;
+  --yellow-hover: #e6b800;
+  --blue: #003399;
+  --blue-dark: #002266;
+  --dark: #111111;
+  --dark-gray: #1a1a1a;
+  --light-gray: #f4f6f8;
+  --white: #ffffff;
+  --green: #25d366;
+  --green-hover: #1eb956;
+  --radius: 12px;
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--light-gray);
+  color: #333;
+  line-height: 1.5;
+  padding-bottom: 75px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* CABEÇALHOS DE SEÇÃO (compartilhados) */
+.section-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+  outline: 3px solid #2f6fed;
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding-bottom: 0;
+  }
+}
